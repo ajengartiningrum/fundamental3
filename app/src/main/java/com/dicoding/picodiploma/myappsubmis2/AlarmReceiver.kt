@@ -8,7 +8,9 @@ class AlarmReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
         // This method is called when the BroadcastReceiver is receiving an Intent broadcast.
-        companion val
+        companion object : PendingResult {
+            
+        }
         TODO("AlarmReceiver.onReceive() is not implemented")
     }
 }
