@@ -19,8 +19,6 @@ import com.dicoding.picodiploma.myappsubmis2.R
 import java.util.*
 
 class AlarmReceiver : BroadcastReceiver() {
-
-    override fun onReceive(context: Context, intent: Intent) {
         // This method is called when the BroadcastReceiver is receiving an Intent broadcast.
         companion object {
             const val EXTRA_MODE = "repeat_alarm"
