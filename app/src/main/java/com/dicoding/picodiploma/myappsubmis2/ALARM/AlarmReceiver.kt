@@ -14,6 +14,7 @@ import android.provider.ContactsContract.QuickContact.EXTRA_MODE
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
+import com.dicoding.picodiploma.myappsubmis2.ALARM.AlarmReceiver.Companion.ID_REPEAT
 import com.dicoding.picodiploma.myappsubmis2.MAIN.MainActivity
 import com.dicoding.picodiploma.myappsubmis2.R
 import java.util.*
@@ -23,16 +24,19 @@ class AlarmReceiver : BroadcastReceiver() {
         companion object {
             const val EXTRA_MODE = "repeat_alarm"
             const val ID_REPEAT = 100
-            const val EXTRA_MESSAGE = "MESSAGE"
+            const val EXTRA_MESSAGE = "message"
             const val EXTRA_TITLE = "title"
             private const val TIME_DAILY = "09.00"
         }
+
+        private val TAG = AlarmReceiver::class.java.simpleName
 
         override fun onReceive(context: Context, intent: Intent) {
             val message = intent.getStringExtra(EXTRA_MESSAGE)
             val title = intent.getStringExtra(EXTRA_TITLE)
             showNotification(context, title, message)
         }
+    }
 
         fun setRepeatAlarm(context: Context, type: String, title: String?, message: String?){
             val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
@@ -42,7 +46,7 @@ class AlarmReceiver : BroadcastReceiver() {
             intent.putExtra(EXTRA_TITLE, title)
 
             val calendar = Calendar.getInstance()
-            calendar.set(Calendar.HOUR, 9)
+            calendar.set(Calendar.HOUR_OF_DAY, 9)
             calendar.set(Calendar.MINUTE, 0)
             calendar.set(Calendar.SECOND, 0)
 
@@ -51,7 +55,7 @@ class AlarmReceiver : BroadcastReceiver() {
             Toast.makeText(context, "Alarm is ON", Toast.LENGTH_SHORT).show()
         }
 
-        fun unsetRepeatAlarm(context: Context){
+        fun cancelAlarm(context: Context, type:String){
             val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
             val intent = Intent(context, AlarmReceiver::class.java)
             val requestCode = ID_REPEAT
