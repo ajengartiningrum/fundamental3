@@ -107,7 +107,7 @@ class MainActivity : AppCompatActivity() {
                     return true
                 } else {
                     list.clear()
-                    DetailViewModel.(query)
+                    DetailViewModel()
                 }
                 return true
             }
