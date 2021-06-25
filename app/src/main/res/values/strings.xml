@@ -10,6 +10,7 @@
     <string name="follower">Follower</string>
     <string name="following">Following</string>
     <string name="find_username">Find Username</string>
+    <string name="empty_favorite">Empty Favorite</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
