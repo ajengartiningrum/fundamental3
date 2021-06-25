@@ -10,7 +10,10 @@ import com.dicoding.picodiploma.myappsubmis2.DATABASE.DatabaseContract.FavoriteC
 import com.dicoding.picodiploma.myappsubmis2.DATABASE.DatabaseContract.FavoriteColumns.Companion.TABLE_NAME
 import com.dicoding.picodiploma.myappsubmis2.DATABASE.DatabaseContract.FavoriteColumns.Companion.USERNAME
 
-internal class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,null, DATABASE_VERSION) {
+internal class DatabaseHelper(context: Context) : SQLiteOpenHelper(context,
+    DATABASE_NAME,null,
+    DATABASE_VERSION
+) {
     companion object{
         private const val DATABASE_NAME = "dbuseritems"
         private const val DATABASE_VERSION = 1

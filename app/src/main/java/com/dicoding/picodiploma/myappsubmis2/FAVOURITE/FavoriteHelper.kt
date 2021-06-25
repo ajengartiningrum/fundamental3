@@ -11,7 +11,8 @@ import java.sql.SQLException
 
 class FavoriteHelper(context: Context) {
 
-    private var databaseHelper: DatabaseHelper = DatabaseHelper(context)
+    private var databaseHelper: DatabaseHelper =
+        DatabaseHelper(context)
     private lateinit var database: SQLiteDatabase
 
     companion object{
