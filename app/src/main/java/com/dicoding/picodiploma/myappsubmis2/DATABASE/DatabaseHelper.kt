@@ -1,16 +1,19 @@
-package com.dicoding.picodiploma.myappsubmis2
+package com.dicoding.picodiploma.myappsubmis2.DATABASE
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.provider.BaseColumns._ID
-import com.dicoding.picodiploma.myappsubmis2.DatabaseContract.FavoriteColumns.Companion.AVATAR
-import com.dicoding.picodiploma.myappsubmis2.DatabaseContract.FavoriteColumns.Companion.COMPANY
-import com.dicoding.picodiploma.myappsubmis2.DatabaseContract.FavoriteColumns.Companion.LOCATION
-import com.dicoding.picodiploma.myappsubmis2.DatabaseContract.FavoriteColumns.Companion.TABLE_NAME
-import com.dicoding.picodiploma.myappsubmis2.DatabaseContract.FavoriteColumns.Companion.USERNAME
+import com.dicoding.picodiploma.myappsubmis2.DATABASE.DatabaseContract.FavoriteColumns.Companion.AVATAR
+import com.dicoding.picodiploma.myappsubmis2.DATABASE.DatabaseContract.FavoriteColumns.Companion.COMPANY
+import com.dicoding.picodiploma.myappsubmis2.DATABASE.DatabaseContract.FavoriteColumns.Companion.LOCATION
+import com.dicoding.picodiploma.myappsubmis2.DATABASE.DatabaseContract.FavoriteColumns.Companion.TABLE_NAME
+import com.dicoding.picodiploma.myappsubmis2.DATABASE.DatabaseContract.FavoriteColumns.Companion.USERNAME
 
-internal class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,null, DATABASE_VERSION) {
+internal class DatabaseHelper(context: Context) : SQLiteOpenHelper(context,
+    DATABASE_NAME,null,
+    DATABASE_VERSION
+) {
     companion object{
         private const val DATABASE_NAME = "dbuseritems"
         private const val DATABASE_VERSION = 1

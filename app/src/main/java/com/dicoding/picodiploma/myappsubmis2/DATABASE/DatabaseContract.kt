@@ -1,4 +1,4 @@
-package com.dicoding.picodiploma.myappsubmis2
+package com.dicoding.picodiploma.myappsubmis2.DATABASE
 
 import android.net.Uri
 import android.provider.BaseColumns

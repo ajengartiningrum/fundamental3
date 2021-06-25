@@ -5,12 +5,14 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.provider.BaseColumns._ID
-import com.dicoding.picodiploma.myappsubmis2.DatabaseContract.FavoriteColumns.Companion.TABLE_NAME
+import com.dicoding.picodiploma.myappsubmis2.DATABASE.DatabaseContract.FavoriteColumns.Companion.TABLE_NAME
+import com.dicoding.picodiploma.myappsubmis2.DATABASE.DatabaseHelper
 import java.sql.SQLException
 
 class FavoriteHelper(context: Context) {
 
-    private var databaseHelper: DatabaseHelper = DatabaseHelper(context)
+    private var databaseHelper: DatabaseHelper =
+        DatabaseHelper(context)
     private lateinit var database: SQLiteDatabase
 
     companion object{
