@@ -12,6 +12,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.picodiploma.myappsubmis2.DETAIL.DetailActivity
+import com.dicoding.picodiploma.myappsubmis2.DETAIL.DetailViewModel
 import com.dicoding.picodiploma.myappsubmis2.R
 import com.dicoding.picodiploma.myappsubmis2.USER.UserAdapter
 import com.dicoding.picodiploma.myappsubmis2.USER.UserItems
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.title = "Github User Search"
 
         showRecycleView()
+        searchData()
     }
 
     private fun showRecycleView(){
@@ -96,5 +98,23 @@ class MainActivity : AppCompatActivity() {
         }else{
             progres_bar.visibility = View.GONE
         }
+    }
+
+    private fun searchData() {
+        user_search.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String): Boolean {
+                if (query.isEmpty()) {
+                    return true
+                } else {
+                    list.clear()
+                    DetailViewModel.(query)
+                }
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String): Boolean {
+                return false
+            }
+        })
     }
 }
