@@ -1,11 +1,12 @@
-package com.dicoding.picodiploma.myappsubmis2
+package com.dicoding.picodiploma.myappsubmis2.FAVOURITE
 
 import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.provider.BaseColumns._ID
-import com.dicoding.picodiploma.myappsubmis2.DatabaseContract.FavoriteColumns.Companion.TABLE_NAME
+import com.dicoding.picodiploma.myappsubmis2.DATABASE.DatabaseContract.FavoriteColumns.Companion.TABLE_NAME
+import com.dicoding.picodiploma.myappsubmis2.DATABASE.DatabaseHelper
 import java.sql.SQLException
 
 class FavoriteHelper(context: Context) {
@@ -18,8 +19,10 @@ class FavoriteHelper(context: Context) {
         private var INSTANCE: FavoriteHelper? = null
 
         fun getInstance(context: Context): FavoriteHelper =
-            INSTANCE ?: synchronized(this){
-                INSTANCE ?: FavoriteHelper(context)
+            INSTANCE
+                    ?: synchronized(this){
+                INSTANCE
+                        ?: FavoriteHelper(context)
             }
     }
 
@@ -37,7 +40,7 @@ class FavoriteHelper(context: Context) {
 
     fun queryAll(): Cursor {
         return database.query(
-            DATABASE_TABLE,
+                DATABASE_TABLE,
             null,
             null,
             null,
@@ -49,7 +52,7 @@ class FavoriteHelper(context: Context) {
 
     fun queryById(id: String): Cursor {
         return database.query(
-            DATABASE_TABLE,
+                DATABASE_TABLE,
             null,
             "$_ID = ?",
             arrayOf(id),

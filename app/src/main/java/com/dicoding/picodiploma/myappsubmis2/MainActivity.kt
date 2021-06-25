@@ -6,14 +6,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuItem
 import androidx.appcompat.widget.SearchView
 import android.view.View
 import androidx.lifecycle.Observer
-import android.widget.Toast
-import android.provider.Settings
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.dicoding.picodiploma.myappsubmis2.DETAIL.DetailActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 

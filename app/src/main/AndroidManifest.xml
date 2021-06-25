@@ -29,7 +29,7 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".DetailActivity" />
+        <activity android:name=".DETAIL.DetailActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
