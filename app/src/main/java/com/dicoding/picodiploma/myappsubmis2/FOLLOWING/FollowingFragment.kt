@@ -1,4 +1,4 @@
-package com.dicoding.picodiploma.myappsubmis2
+package com.dicoding.picodiploma.myappsubmis2.FOLLOWING
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,6 +9,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.picodiploma.myappsubmis2.DETAIL.DetailActivity
+import com.dicoding.picodiploma.myappsubmis2.R
+import com.dicoding.picodiploma.myappsubmis2.USER.UserItems
 import kotlinx.android.synthetic.main.fragment_following.*
 
 
@@ -33,7 +35,8 @@ class FollowingFragment : Fragment() {
     }
 
     private fun configFollowing(){
-        adapter = FollowingAdapter(list)
+        adapter =
+            FollowingAdapter(list)
         adapter.notifyDataSetChanged()
 
         rv_following.layoutManager = LinearLayoutManager(activity)

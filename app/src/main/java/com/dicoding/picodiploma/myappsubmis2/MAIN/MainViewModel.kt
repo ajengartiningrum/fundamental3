@@ -1,8 +1,9 @@
-package com.dicoding.picodiploma.myappsubmis2
+package com.dicoding.picodiploma.myappsubmis2.MAIN
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.dicoding.picodiploma.myappsubmis2.USER.UserItems
 import com.loopj.android.http.AsyncHttpClient
 import com.loopj.android.http.AsyncHttpClient.log
 import com.loopj.android.http.AsyncHttpResponseHandler
@@ -30,7 +31,11 @@ class MainViewModel : ViewModel() {
 
                     for (i in 0 until list.length()){
                         val item = list.getJSONObject(i)
-                        val userItems = UserItems (avatar = null, username = null)
+                        val userItems =
+                            UserItems(
+                                avatar = null,
+                                username = null
+                            )
                         userItems.avatar = item.getString("avatar_url")
                         userItems.username = item.getString("login")
 

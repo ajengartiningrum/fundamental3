@@ -1,4 +1,4 @@
-package com.dicoding.picodiploma.myappsubmis2
+package com.dicoding.picodiploma.myappsubmis2.FAVOURITE
 
 import android.database.Cursor
 import android.provider.BaseColumns._ID

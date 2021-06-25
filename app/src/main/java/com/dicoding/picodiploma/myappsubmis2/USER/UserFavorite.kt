@@ -1,4 +1,4 @@
-package com.dicoding.picodiploma.myappsubmis2
+package com.dicoding.picodiploma.myappsubmis2.USER
 
 import android.database.ContentObserver
 import android.os.Bundle
@@ -9,6 +9,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.picodiploma.myappsubmis2.FAVOURITE.Favorite
+import com.dicoding.picodiploma.myappsubmis2.FAVOURITE.MappingHelper
+import com.dicoding.picodiploma.myappsubmis2.R
+import kotlinx.android.synthetic.main.activity_favorite.*
 
 class UserFavorite : AppCompatActivity() {
     private lateinit var adapter: FavoriteAdapter

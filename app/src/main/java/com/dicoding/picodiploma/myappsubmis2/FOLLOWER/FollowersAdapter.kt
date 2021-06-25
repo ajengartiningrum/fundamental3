@@ -1,10 +1,11 @@
-package com.dicoding.picodiploma.myappsubmis2
+package com.dicoding.picodiploma.myappsubmis2.FOLLOWER
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.dicoding.picodiploma.myappsubmis2.R
 import kotlinx.android.synthetic.main.followers_items.view.*
 
 class FollowersAdapter(private val mDataFollowers: ArrayList<FollowersItems>): RecyclerView.Adapter<FollowersAdapter.FollowersViewHolder>(){

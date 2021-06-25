@@ -7,10 +7,9 @@ import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import androidx.lifecycle.Observer
-import com.dicoding.picodiploma.myappsubmis2.DetailViewModel
 import com.dicoding.picodiploma.myappsubmis2.R
 import com.dicoding.picodiploma.myappsubmis2.SectionPagerAdapter
-import com.dicoding.picodiploma.myappsubmis2.UserItems
+import com.dicoding.picodiploma.myappsubmis2.USER.UserItems
 import kotlinx.android.synthetic.main.activity_detail.*
 
 class DetailActivity : AppCompatActivity() {

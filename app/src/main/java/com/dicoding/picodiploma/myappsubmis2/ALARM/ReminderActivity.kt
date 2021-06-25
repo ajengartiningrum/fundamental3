@@ -1,6 +1,7 @@
-package com.dicoding.picodiploma.myappsubmis2
+package com.dicoding.picodiploma.myappsubmis2.ALARM
 
 import android.os.Bundle
+import com.dicoding.picodiploma.myappsubmis2.R
 
 class ReminderActivity() {
 

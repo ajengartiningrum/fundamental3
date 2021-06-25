@@ -1,4 +1,4 @@
-package com.dicoding.picodiploma.myappsubmis2
+package com.dicoding.picodiploma.myappsubmis2.MAIN
 
 import android.app.SearchManager
 import android.content.Context
@@ -12,6 +12,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.picodiploma.myappsubmis2.DETAIL.DetailActivity
+import com.dicoding.picodiploma.myappsubmis2.R
+import com.dicoding.picodiploma.myappsubmis2.USER.UserAdapter
+import com.dicoding.picodiploma.myappsubmis2.USER.UserItems
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -37,7 +40,8 @@ class MainActivity : AppCompatActivity() {
         item_recycle_view.layoutManager = LinearLayoutManager(this)
         item_recycle_view.adapter = adapter
 
-        mainViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(MainViewModel::class.java)
+        mainViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(
+            MainViewModel::class.java)
 
         mainViewModel.getUser().observe(this, Observer { UserItems ->
             if ((UserItems != null)) {
@@ -46,7 +50,8 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        adapter.setOnItemClickCallback(object : UserAdapter.OnItemClickCallback {
+        adapter.setOnItemClickCallback(object :
+            UserAdapter.OnItemClickCallback {
             override fun onItemClicked(userItems: UserItems) {
                 showDetail(userItems)
             }

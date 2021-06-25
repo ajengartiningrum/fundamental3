@@ -1,4 +1,4 @@
-package com.dicoding.picodiploma.myappsubmis2
+package com.dicoding.picodiploma.myappsubmis2.USER
 
 import android.os.Parcel
 import android.os.Parcelable

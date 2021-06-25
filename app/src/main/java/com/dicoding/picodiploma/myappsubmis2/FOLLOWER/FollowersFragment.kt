@@ -1,4 +1,4 @@
-package com.dicoding.picodiploma.myappsubmis2
+package com.dicoding.picodiploma.myappsubmis2.FOLLOWER
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,6 +9,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.picodiploma.myappsubmis2.DETAIL.DetailActivity
+import com.dicoding.picodiploma.myappsubmis2.R
+import com.dicoding.picodiploma.myappsubmis2.USER.UserItems
 import kotlinx.android.synthetic.main.fragment_followers.*
 
 
@@ -34,7 +36,8 @@ class FollowersFragment : Fragment() {
     }
 
     private fun configFollowers(){
-    adapter = FollowersAdapter(list)
+    adapter =
+        FollowersAdapter(list)
         adapter.notifyDataSetChanged()
 
         rv_followers.setHasFixedSize(true)

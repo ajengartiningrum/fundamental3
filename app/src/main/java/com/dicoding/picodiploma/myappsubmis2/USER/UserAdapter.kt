@@ -1,12 +1,11 @@
-package com.dicoding.picodiploma.myappsubmis2
+package com.dicoding.picodiploma.myappsubmis2.USER
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.dicoding.picodiploma.myappsubmis2.UserItems
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.activity_detail.view.*
+import com.dicoding.picodiploma.myappsubmis2.R
 import kotlinx.android.synthetic.main.item_user.view.*
 
 class UserAdapter(private val mData: ArrayList<UserItems>): RecyclerView.Adapter<UserAdapter.UserViewHolder>() {

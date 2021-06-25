@@ -1,4 +1,4 @@
-package com.dicoding.picodiploma.myappsubmis2
+package com.dicoding.picodiploma.myappsubmis2.FOLLOWING
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

@@ -1,4 +1,4 @@
-package com.dicoding.picodiploma.myappsubmis2
+package com.dicoding.picodiploma.myappsubmis2.ALARM
 
 import android.app.AlarmManager
 import android.app.Notification.EXTRA_TITLE
@@ -8,13 +8,14 @@ import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.media.RingtoneManager
 import android.os.Build
 import android.provider.AlarmClock.EXTRA_MESSAGE
 import android.provider.ContactsContract.QuickContact.EXTRA_MODE
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
+import com.dicoding.picodiploma.myappsubmis2.MAIN.MainActivity
+import com.dicoding.picodiploma.myappsubmis2.R
 import java.util.*
 
 class AlarmReceiver : BroadcastReceiver() {
