@@ -7,7 +7,7 @@
     android:layout_gravity="center"
     tools:context=".USER.UserFavorite">
 
-    ProgressBar
+    <ProgressBar
     android:id="@+id/progressBarFav"
     style="?android:attr/progressBarStyle"
     android:layout_width="wrap_content"
@@ -26,9 +26,9 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_bar"
         app:layout_constraintVertical_bias="0.53"
-        tools:listitem="@layout/item_row_users"
+        tools:listitem="@layout/item_user"
         tools:ignore="UnknownIdInLayout" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

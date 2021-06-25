@@ -8,10 +8,16 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.dicoding.picodiploma.myappsubmis2.DATABASE.DatabaseContract.FavoriteColumns.Companion.CONTENT_URI
 import com.dicoding.picodiploma.myappsubmis2.FAVOURITE.Favorite
+import com.dicoding.picodiploma.myappsubmis2.FAVOURITE.FavoriteAdapter
 import com.dicoding.picodiploma.myappsubmis2.FAVOURITE.MappingHelper
 import com.dicoding.picodiploma.myappsubmis2.R
 import kotlinx.android.synthetic.main.activity_favorite.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
 
 class UserFavorite : AppCompatActivity() {
     private lateinit var adapter: FavoriteAdapter
@@ -22,7 +28,7 @@ class UserFavorite : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_fav)
+        setContentView(R.layout.activity_favorite)
         setActionBarTitle()
 
         recycleViewFav.layoutManager = LinearLayoutManager(this)
