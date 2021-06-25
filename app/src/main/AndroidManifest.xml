@@ -25,11 +25,14 @@
             android:enabled="true"
             android:exported="true"></receiver>
         <receiver
-            android:name=".Alarm"
+            android:name=".ALARM.AlarmReceiver"
             android:enabled="true"
             android:exported="true" />
 
         <activity android:name=".DETAIL.DetailActivity" />
+        <activity android:name=".USER.UserFavorite">
+
+        </activity>
         <activity android:name=".MAIN.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
