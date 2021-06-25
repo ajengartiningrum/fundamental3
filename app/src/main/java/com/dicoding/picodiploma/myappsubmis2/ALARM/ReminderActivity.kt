@@ -26,14 +26,12 @@ class ReminderActivity: AppCompatActivity() {
         alarmReceiver = AlarmReceiver()
         sharedPreferences = getSharedPreferences(PREFERENCE, Context.MODE_PRIVATE)
 
-
-
         SwitchofSet()
         AlarmSw.setOnCheckedChangeListener {_, isChecked ->
             if(isChecked){
                 alarmReceiver.setRepeatAlarm(
                     this, AlarmReceiver.EXTRA_MODE,"Find your favourite github user") }else {
-                alarmReceiver.unsetRepeatAlarm(this)
+                alarmReceiver.cancelAlarm(this)
             }
             Changeissave(isChecked)
 

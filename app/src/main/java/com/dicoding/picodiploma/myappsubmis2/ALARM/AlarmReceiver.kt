@@ -11,6 +11,8 @@ import android.os.Build
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
+import com.dicoding.picodiploma.myappsubmis2.ALARM.AlarmReceiver.Companion.EXTRA_MODE
+import com.dicoding.picodiploma.myappsubmis2.ALARM.AlarmReceiver.Companion.EXTRA_TITLE
 import com.dicoding.picodiploma.myappsubmis2.ALARM.AlarmReceiver.Companion.ID_REPEAT
 import com.dicoding.picodiploma.myappsubmis2.MAIN.MainActivity
 import com.dicoding.picodiploma.myappsubmis2.R
@@ -33,7 +35,7 @@ class AlarmReceiver : BroadcastReceiver() {
             val title = intent.getStringExtra(EXTRA_TITLE)
             showNotification(context, title, message)
         }
-    }
+
 
         fun setRepeatAlarm(
             context: Context,
@@ -55,7 +57,7 @@ class AlarmReceiver : BroadcastReceiver() {
             Toast.makeText(context, "Alarm is ON", Toast.LENGTH_SHORT).show()
         }
 
-        fun cancelAlarm(context: Context, type:String){
+        fun cancelAlarm(context: Context){
             val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
             val intent = Intent(context, AlarmReceiver::class.java)
             val requestCode = ID_REPEAT
