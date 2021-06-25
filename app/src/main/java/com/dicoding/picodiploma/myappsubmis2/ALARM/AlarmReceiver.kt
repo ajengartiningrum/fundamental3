@@ -1,7 +1,6 @@
 package com.dicoding.picodiploma.myappsubmis2.ALARM
 
 import android.app.AlarmManager
-import android.app.Notification.EXTRA_TITLE
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -9,8 +8,6 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.os.Build
-import android.provider.AlarmClock.EXTRA_MESSAGE
-import android.provider.ContactsContract.QuickContact.EXTRA_MODE
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
@@ -34,10 +31,13 @@ class AlarmReceiver : BroadcastReceiver() {
             showNotification(context, title, message)
         }
 
-        fun setRepeatAlarm(context: Context, type: String, title: String?, message: String?){
+        fun setRepeatAlarm(
+            context: Context,
+            type: String,
+            title: String?
+        ){
             val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
             val intent = Intent(context, AlarmReceiver::class.java)
-            intent.putExtra(EXTRA_MESSAGE, message)
             intent.putExtra(EXTRA_MODE, type)
             intent.putExtra(EXTRA_TITLE, title)
 

@@ -6,4 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".ALARM.ReminderActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ALARM SETTINGS"
+        android:textColor="#FF0000"
+        android:textStyle="bold|italic"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="26dp"
+        tools:ignore="MissingConstraints" />
+
+    <Switch
+        android:id="@+id/AlarmSw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GITHUB DAILY ACTIVITY"
+        android:paddingEnd="12dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="59dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
