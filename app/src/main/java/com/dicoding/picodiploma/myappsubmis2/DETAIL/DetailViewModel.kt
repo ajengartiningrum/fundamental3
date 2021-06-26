@@ -12,7 +12,7 @@ import org.json.JSONObject
 class DetailViewModel : ViewModel() {
     val detail = MutableLiveData<ArrayList<DetailItems>>()
 
-    fun setUser(name: String?) {
+    public fun setUser(name: String?) {
         val listItems = ArrayList<DetailItems>()
         val url = "https://api.github.com/users/$name"
 
