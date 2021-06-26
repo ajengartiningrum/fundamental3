@@ -4,7 +4,7 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-class DetailItems(
+data class DetailItems(
         var avatar: String?,
         var name: String?,
         var username: String?,
