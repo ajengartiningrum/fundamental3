@@ -201,7 +201,7 @@ class MainActivity : AppCompatActivity() {
                     val company: String? = jsonObject.getString("company").toString()
                     val location: String? = jsonObject.getString("location").toString()
                     list.add(
-                            UserItems(
+                            userdata(
                                     username,
                                     name,
                                     avatar,
